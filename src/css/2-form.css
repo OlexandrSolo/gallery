@@ -1,3 +1,11 @@
+main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .back-link {
   display: inline-block;
   align-items: center;
@@ -30,4 +38,78 @@
 .back-icon {
   font-style: 16px;
   line-height: 1px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.label-js {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-family: inherit;
+  font-size: 14px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  border: 1px solid #ccc;
+  outline: none;
+
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-form button {
+  margin-top: 8px;
+  padding: 12px;
+
+  border-radius: 14px;
+  border: none;
+
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 200ms ease, box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+
+.feedback-form button:hover {
+  transform: scaleY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form button:active {
+  transform: translateY(0);
 }
